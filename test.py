@@ -8,3 +8,5 @@ a = "110"   # 6
 b = "1101"  # 13
 c = strToBin(a, b)  # 10011 -> 19
 print(c)
+
+print(max(2, 3))

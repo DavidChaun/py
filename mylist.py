@@ -4,7 +4,9 @@ list2.sort()
 
 list1.append("hello py")    # java list add
 list1.remove("hello py")    # java list remove
-del list1[2]                # 针对索引删除
+# del list1[2]                # 针对索引删除
+
+print()
 print(list1.count(2000))    # 元素出现次数
 
 # 内置方法

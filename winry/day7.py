@@ -23,6 +23,7 @@ Q：
 A：
 这道题跟day6第二道题很像，但有一点细微的差异，首先是多了0，而0是不能作为数字开头的
 其次要能被15整除，仅仅是条件多了一个而已，适合把day6的第二道题目拷下来 (ง •_•)ง
+其实还可以遍历100~999之间的数，然后先判断是否能被15整除，然后再判断数字是否重复
 """
 def match_diff_num_pro(list_num):
     match_list = []     # 定义一个空数组，为了最后统计符合条件的数有多少个，顺便可以打印出来瞧瞧 =。=
@@ -33,7 +34,7 @@ def match_diff_num_pro(list_num):
             for e3 in list_num:     # 数组再次遍历，再取出第三个数
                 if e1 != e2 != e3 and e1 != e3:     # day6注释2
                     match_num = int(str(e1) + str(e2) + str(e3))    # day6注释3
-                    if match_num % 15 == 0:
+                    if match_num % 15 == 0:     # 取余为0
                         # print("符合规则的数字是：%d" % match_num)
                         match_list.append(match_num)    # 把符合规则的数字放入列表里
     else:

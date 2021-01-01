@@ -1,5 +1,5 @@
 """
-design by wayne
+design by Edward
 """
 import xlrd
 import requests

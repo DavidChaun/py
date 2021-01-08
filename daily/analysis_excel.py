@@ -50,14 +50,14 @@ def get_pic(source_url_path, head=0, target_path_dir='D:/111_Edward_magic_image'
 
 def down_pic_native(url1, url2, file_name, target_path_dir):
     try:
-        if not str(url1).startswith("http") and not str(url2).startswith("http"):
-            return
         image_name_temp = str(file_name).replace(":", "：")
-        full_img_name_temp1 = gen_pic_local(url1, file_name, target_path_dir)
-        move_pic_to_dir(full_img_name_temp1, target_path_dir, image_name_temp)
+        if str(url1).startswith("http"):
+            full_img_name_temp1 = gen_pic_local(url1, file_name, target_path_dir)
+            move_pic_to_dir(full_img_name_temp1, target_path_dir, image_name_temp)
 
-        full_img_name_temp2 = gen_pic_local(url2, file_name, target_path_dir)
-        move_pic_to_dir(full_img_name_temp2, target_path_dir, image_name_temp)
+        if str(url2).startswith("http"):
+            full_img_name_temp2 = gen_pic_local(url2, file_name, target_path_dir)
+            move_pic_to_dir(full_img_name_temp2, target_path_dir, image_name_temp)
 
     except EOFError:
         pass

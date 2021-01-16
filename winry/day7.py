@@ -51,6 +51,10 @@ Q：
 A：
 其实就这题目，我一看就想直接手动算出来 （。＾▽＾） 毕竟只是计算到6而已，如果这么做可以过的话那也太混了吧
 所以还是给了一个通用的方案出来 =。= 这样无论范围给多大都可以做了 (￣y▽,￣)╭ 
+
+题目思路是，先把这道题看作是 1 + 2 + 3 + 4 + ... + 6，然后每次累加的时候，遍历当前累加的数字n，
+n=2时遍历2次，n=3时遍历三次，然后把数字合成字符串，再把字符串转为数字
+
 """
 def sum_up_cond_num(scope):
     sum_up = 0      # 定义和
@@ -65,5 +69,10 @@ def sum_up_cond_num(scope):
         print("s = %s = %d" % (content[0:-2], sum_up))
         print("和为 ：%d" % sum_up)
 
+def sum_up_cond_num_two():      # 非常讨巧的做法，题目要啥我做啥 hhh
+    sum_up = 1 + 22 + 333 + 4444 + 55555 + 666666
+    print("和为 ：%d" % sum_up)
+    return sum_up
 
 sum_up_cond_num(7)
+sum_up_cond_num_two()

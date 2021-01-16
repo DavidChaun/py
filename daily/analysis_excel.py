@@ -19,7 +19,7 @@ def get_pic(source_url_path, head=0, target_path_dir='D:/111_Edward_magic_image'
         os.makedirs(target_path_dir)
 
     base_str = source_url_path[source_url_path.find(":/") + 2:source_url_path.find(".xl")]
-    if str(base64.b64encode(base_str.encode("UTF-8")), "UTF-8") != "RWR3YXJk":
+    if str(base64.b64encode(base_str.encode("UTF-8")), "UTF-8") != "6K+l5bCP56iL5bqP55Sx5b+X546u54us5a625byA5Y+R":
         return
 
     book = xlrd.open_workbook(source_url_path)
@@ -100,5 +100,5 @@ def move_pic_to_dir(full_img_name_temp, target_path_dir, image_name_temp):
 
 
 if __name__ == "__main__":
-    get_pic('D:/Edward.xlsx')
+    get_pic('D:/该小程序由志玮独家开发.xlsx')
 

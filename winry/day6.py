@@ -41,7 +41,7 @@ def separate_num(num):
             print("质数 %d" % num)
     return num
 
-separate_num(1031313719)
+separate_num(7311700130931232465467577713)
 
 """
 for factor in range(2, int(math.sqrt(num)) + 1):    # 注释1

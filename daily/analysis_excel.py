@@ -66,7 +66,7 @@ def down_pic_native(url1, url2, file_name, target_path_dir):
 def gen_pic_local(url, file_name, base_dir):
     url1_image = requests.get(url)
 
-    image_name_temp = str(file_name).replace(":", "：")
+    image_name_temp = str(file_name).replace(":", "：").replace("\\", " ").replace("/", " ").replace("*", " ").replace("?", "？").replace('"', "“").replace("<", "《").replace(">", "》").replace("|", "l")
     full_img_name_temp = '%s/%s.jpg' % (base_dir, image_name_temp)
 
     f = open(full_img_name_temp, 'wb')

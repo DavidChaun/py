@@ -12,7 +12,7 @@ def str_to_bin(numStr1, numStr2):
 
 
 def read_file():
-    file = open("winry/day10.py", "rt", encoding="UTF-8")
+    file = open("test/day10.py", "rt", encoding="UTF-8")
     for data in file:
         print(data, end="")
 
@@ -38,3 +38,7 @@ print(str(a, "UTF-8"))
 print(str(base64.b64decode(a), "UTF-8"))
 
 print(sys.version)
+
+file_name = '":\/<>|*?'
+image_name_temp = str(file_name).replace(":", "：").replace("\\", " ").replace("/", " ").replace("*", " ").replace("?", "？").replace('"', "“").replace("<", "《").replace(">", "》").replace("|", "l")
+print(image_name_temp)
